@@ -3,9 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  sanity: {
+    projectId: 'ynzvas75',
+    dataset: 'production',
+    useCdn: true,
+  },
+  web: {
+    url: '<#< deployments.web.url >#>',
+  },
 };
-
+// https://7abtqvex.apicdn.sanity.io/v1/data/query/products?query=${query}
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

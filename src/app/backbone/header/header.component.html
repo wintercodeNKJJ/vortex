@@ -1,0 +1,49 @@
+<div>
+  <div class="flex justify-between bg-base-300 rounded-3xl m-4">
+    <div class="p-4">
+      <a href="" class="font-bold font-sans text-3xl hover:text-blue-400">Vortex Gaming</a>
+    </div>
+
+    <div class="md:flex justify-center items-center hidden md:visible">
+      <ul class="font-light flex justify-center items-center gap-4">
+        <li class="hover:text-blue-400"><a href="/">Home</a></li>
+        <li class="hover:text-blue-400"><a href="/games">Games</a></li>
+        <li class="hover:text-blue-400"><a href="/services">Services</a></li>
+        <li class="hover:text-blue-400"><a href="/equipment">Equipment</a></li>
+      </ul>
+    </div>
+
+    <div id="dropdown" data-dropdown-toggle="dropdownMenu" data-dropdown-trigger="click"
+      class="visible md:hidden flex justify-center items-center">Menu</div>
+
+    <div class="z-40 hidden divide-gray-100 w-full bg-base-100 opacity-90 rounded-box" id="dropdownMenu">
+      <div class="m-auto flex flex-col gap-4 font-light text-xl py-4">
+        <div class="flex justify-center"><a href="/">Home</a></div>
+        <div class="flex justify-center"><a href="/games">Games</a></div>
+        <div class="flex justify-center"><a href="/services">Services</a></div>
+        <div class="flex justify-center"><a href="/equipment">Equipment</a></div>
+      </div>
+    </div>
+
+    <div class="flex justify-around items-center p-4 gap-4">
+
+      <!-- search bar -->
+      <div class="max-[768px]:hidden md:visible lg:visible">
+        <input type="text" name="search" id="search" placeholder="Search..."
+          class="rounded-box shadow shadow-base-100 form-control bg-gray-700 px-2 max-w-[12rem]">
+      </div>
+
+      <div class="font-light hover:bg-base-100 p-2 rounded-box">
+        <span class="rounded-box hover:text-blue-600">Logout</span>
+      </div>
+
+      <div class="relative">
+        <img
+          src="/imges2/Pin de Selin en wallpapers _ Arte del sistema solar, Fondo de pantalla del teléfono, Empapelado de galaxias.jpeg"
+          alt="profile" class="rounded-full min-w-[2.5rem] min-h-[2.5rem] w-10 h-10 bg-white">
+
+        <div class="rounded-full h-4 w-4 bg-green-300 absolute z-40 -top-1 -right-1"></div>
+      </div>
+    </div>
+  </div>
+</div>
