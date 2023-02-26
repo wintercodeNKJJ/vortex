@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-eventcard',
   templateUrl: './eventcard.component.html',
-  styleUrls: ['./eventcard.component.css']
+  styleUrls: ['./eventcard.component.css'],
 })
 export class EventcardComponent implements OnInit {
+  @Input()
+  _id?: string;
 
-  constructor() { }
+  @Input()
+  title?: string;
 
-  ngOnInit(): void {
-  }
+  @Input()
+  url?: string;
 
+  constructor() {}
+
+  ngOnInit(): void {}
 }

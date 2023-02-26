@@ -1,33 +1,36 @@
-<app-top-image></app-top-image>
+<app-top-image [title]="cat[0].title" [url]="imageUrl(cat[0].image).url()"></app-top-image>
 <div class="grid grid-cols-1 md:grid-cols-4">
   <div class="p-4">
-    <div class="relative h-full">
+    <div class="relative">
       <div class="py-2 px-1 sticky top-0 bg-base-100 z-10">
-        <h1 class="font-bold text-3xl hover:text-blue-600">Side items</h1>
+        <h1 class="font-bold text-3xl hover:text-blue-600">Events</h1>
       </div>
       <div>
         <div class="flex flex-col gap-2 justify-center">
-          <app-eventcard></app-eventcard>
-
-        </div>
-
-        <div class="divider"></div>
-
-        <div>
-          <div class="py-2 px-1">
-            <h1 class="font-bold text-3xl hover:text-blue-600">News</h1>
+          <div *ngFor="let event of Event1">
+            <app-eventcard [_id]="event._id" [title]="event.title" [url]="imageUrl(event.mainImage).url()">
+            </app-eventcard>
           </div>
-          <div>
-            <div class="grid grid-cols-1 gap-6">
 
-              <app-blogcard></app-blogcard>
-              <app-blogcard></app-blogcard>
-
-            </div>
-          </div>
         </div>
       </div>
     </div>
+
+    <div class="relative h-full">
+      <div class="py-2 px-1 sticky top-0 z-10 bg-base-100">
+        <h1 class="font-bold text-3xl hover:text-blue-600">News</h1>
+      </div>
+      <div>
+        <div class="grid grid-cols-1 gap-6">
+
+          <app-blogcard></app-blogcard>
+          <app-blogcard></app-blogcard>
+
+        </div>
+      </div>
+
+    </div>
+
   </div>
   <div class="col-span-3 p-4">
     <div class="relative">
@@ -40,13 +43,9 @@
         </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <app-itemcard></app-itemcard>
-        <app-itemcard></app-itemcard>
-        <app-itemcard></app-itemcard>
-        <app-itemcard></app-itemcard>
-        <app-itemcard></app-itemcard>
-        <app-itemcard></app-itemcard>
-        <app-itemcard></app-itemcard>
+        <div *ngFor="let serv of services">
+          <app-itemcard [_id]="serv._id" [title]="serv.title" [url]="imageUrl(serv.mainImage).url()"></app-itemcard>
+        </div>
 
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,10 +9,19 @@ import { Router } from '@angular/router';
 export class ItemcardComponent implements OnInit {
   constructor(private nav: Router) {}
 
+  @Input()
+  _id?: string;
+
+  @Input()
+  title?: string;
+
+  @Input()
+  url?: string;
+
   ngOnInit(): void {}
 
   public ditail() {
     console.log('called');
-    this.nav.navigate(['ditails']);
+    this.nav.navigate(['ditails/' + this._id]);
   }
 }

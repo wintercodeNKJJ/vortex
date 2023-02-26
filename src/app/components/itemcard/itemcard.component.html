@@ -1,8 +1,8 @@
 <div class="rounded-xl overflow-hidden">
-  <img src="/imges2/img1.jpeg" alt="" class="w-full h-52 object-cover">
+  <img src="{{ url }}" alt="" class="w-full h-52 object-cover">
 
   <div class=" bg-blue-200 text-base-300 p-4">
-    <h1 class="font-bold text-lg">This is a game title</h1>
+    <h1 class="font-bold text-lg">{{ title }}</h1>
     <p>This is some text about the image</p>
     <div class="p-1 flex justify-between">
       <button class="btn btn-sm btn-primary" (click)="ditail()">link</button>

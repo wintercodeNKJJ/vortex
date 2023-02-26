@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-top-image',
   templateUrl: './top-image.component.html',
-  styleUrls: ['./top-image.component.css']
+  styleUrls: ['./top-image.component.css'],
 })
 export class TopImageComponent implements OnInit {
+  @Input()
+  title?: string;
 
-  constructor() { }
+  @Input()
+  url?: string;
 
-  ngOnInit(): void {
-  }
+  constructor() {}
 
+  ngOnInit(): void {}
 }

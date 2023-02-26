@@ -24,7 +24,7 @@ import { EquipmentComponent } from './pages/equipment/equipment.component';
         component: ServicesComponent,
       },
       {
-        path: 'ditails',
+        path: 'ditails/:id',
         component: ItemDitailcardComponent,
       },
       {
