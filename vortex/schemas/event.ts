@@ -26,8 +26,14 @@ export default defineType({
     }),
     defineField({
       name: 'price',
-      title: 'Price',
+      title: 'Participation Price',
       type: 'number',
+    }),
+    defineField({
+      name: 'games',
+      title: 'Games List',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'games'}}],
     }),
     defineField({
       name: 'author',

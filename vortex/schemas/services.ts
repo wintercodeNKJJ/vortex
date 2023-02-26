@@ -39,6 +39,12 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'images',
+      title: 'Images',
+      type: 'array',
+      of: [{type: 'image'}],
+    }),
+    defineField({
       name: 'categories',
       title: 'Categories',
       type: 'array',

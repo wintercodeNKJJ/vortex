@@ -16,6 +16,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'price',
+      title: 'Price',
+      type: 'number',
+    }),
+    defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -39,10 +44,10 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'categories',
-      title: 'Categories',
+      name: 'console',
+      title: 'Console',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
+      of: [{type: 'reference', to: {type: 'console'}}],
     }),
     defineField({
       name: 'publishedAt',
