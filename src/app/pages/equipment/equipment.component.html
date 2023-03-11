@@ -1,4 +1,5 @@
-<app-top-image [title]="cat[0].title" [url]="imageUrl(cat[0].image).url()"></app-top-image>
+<app-top-image [title]="cat[0].title" [url]="imageUrl(cat[0].image).url()" [description]="cat[0].description">
+</app-top-image>
 <div class="grid grid-cols-1 md:grid-cols-4">
   <div class="p-4">
     <div class="relative">
@@ -39,7 +40,8 @@
 
         <div>
           <input type="text" name="search" id="search" placeholder="Search..."
-            class="rounded-box shadow shadow-base-100 form-control bg-gray-700 px-2 max-w-[12rem]">
+            class="rounded-box shadow shadow-base-100 form-control bg-gray-700 px-2 max-w-[12rem]"
+            [(ngModel)]="equipmentFilter">
         </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">

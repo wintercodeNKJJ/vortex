@@ -15,9 +15,12 @@ export class GamesComponent implements OnInit {
   public games: Games[] = [];
   public games1: Games[] = [];
   public cat: Category[] = [];
+  public bestGames: Games[] = [];
 
   public Event: Events[] = [];
   public Event1: Events[] = [];
+
+  private _gamesFilter: string = '';
 
   public imageUrl(source: any) {
     return this.service.urlFor(source);
@@ -45,6 +48,35 @@ export class GamesComponent implements OnInit {
 
   async getGames() {
     this.games = await this.service.getGames();
+    this.games1 = this.games;
+
+    let j;
+    for (j = 0; j < 3; j++) {
+      this.bestGames[j] = this.games[j];
+    }
     return this.games;
+  }
+
+  public get gamesFilter(): string {
+    return this._gamesFilter;
+  }
+
+  public set gamesFilter(filter: string) {
+    this._gamesFilter = filter;
+    this.games1 = this._gamesFilter
+      ? this.filterGames(this._gamesFilter)
+      : this.games;
+
+    console.log('the games filtered', this.games1);
+  }
+
+  private filterGames(criteria: string): Games[] {
+    criteria = criteria.toLowerCase();
+
+    const res = this.games.filter(
+      (game: Games) => game.title.toLowerCase().indexOf(criteria) !== -1
+    );
+
+    return res;
   }
 }

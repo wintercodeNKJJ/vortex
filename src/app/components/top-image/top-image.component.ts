@@ -12,6 +12,9 @@ export class TopImageComponent implements OnInit {
   @Input()
   url!: string;
 
+  @Input()
+  description!: string;
+
   constructor() {}
 
   ngOnInit(): void {}

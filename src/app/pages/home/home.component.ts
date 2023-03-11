@@ -28,8 +28,6 @@ export class HomeComponent implements OnInit {
 
   private _gamesFilter: string = '';
 
-  public filteredGames: Games[] = [];
-
   public imageUrl(source: any) {
     return this.service.urlFor(source);
   }
