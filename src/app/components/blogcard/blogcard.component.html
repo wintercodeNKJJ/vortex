@@ -1,13 +1,16 @@
 <div class="rounded-xl overflow-hidden relative border">
-  <img src="/imges2/Lightnings, hurricanes, tornados and supercells by storm chaser Camille Seaman.jpeg" alt="news"
-    class=" rounded-xl w-full object-cover">
+  <img src="{{ url }}">
   <div class="absolute top-1 left-1 z-10">
-    <h1>Some information</h1>
+    <h1>{{ game.title }}</h1>
+    <h2>{{ game.subtitle }}</h2>
   </div>
   <div class="p-1">
-    <p>
+    <p *ngIf="game.body">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique voluptatum, quibusdam qui ut
       impedit
+    </p>
+    <p *ngIf="!game.body">
+      No Content yet Sorry
     </p>
   </div>
 </div>

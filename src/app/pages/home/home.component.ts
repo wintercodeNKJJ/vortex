@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
 
   public games: Games[] = [];
   public games1: Games[] = [];
+  public bestGames: Games[] = [];
 
   public services: Services[] = [];
   public services1: Services[] = [];
@@ -64,14 +65,18 @@ export class HomeComponent implements OnInit {
 
   async getGames() {
     this.games = await this.service.getGames();
-    console.log('games', this.games);
 
     // copy
-    let i;
-    for (i = 0; i < 5; i++) {
+    let i, j;
+    for (i = 0; i < 10; i++) {
       this.games1[i] = this.games[i];
     }
-    console.log('games1', this.games1);
+
+    for (j = 0; j < 3; j++) {
+      this.bestGames[j] = this.games[j];
+    }
+
+    console.log('best games', this.bestGames);
 
     return this.games;
   }

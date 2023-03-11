@@ -4,12 +4,14 @@
     <div class="relative h-full">
       <div class="sticky top-0">
         <div class="py-2 px-1">
-          <h1 class="font-bold text-3xl hover:text-blue-600">News</h1>
+          <h1 class="font-bold text-3xl hover:text-blue-600">Best Games</h1>
         </div>
         <div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
-            <app-blogcard></app-blogcard>
-            <app-blogcard></app-blogcard>
+            <div *ngFor="let item of bestGames">
+              <app-blogcard [game]="item" [url]="imageUrl(item.mainImage).url()"></app-blogcard>
+            </div>
+
           </div>
         </div>
       </div>

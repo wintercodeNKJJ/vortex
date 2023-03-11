@@ -30,7 +30,8 @@ export class SanityserviceService {
     title,
     mainImage,
     releaseDate,
-    poster
+    poster,
+    body,
   }`
     );
   }

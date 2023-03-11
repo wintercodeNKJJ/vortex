@@ -7,10 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TopImageComponent implements OnInit {
   @Input()
-  title?: string;
+  title!: string;
 
   @Input()
-  url?: string;
+  url!: string;
 
   constructor() {}
 
