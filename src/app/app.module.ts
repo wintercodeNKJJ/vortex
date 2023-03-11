@@ -19,6 +19,7 @@ import { LoginComponent } from './modals/login/login.component';
 import { RegisterComponent } from './modals/register/register.component';
 import { NotificationComponent } from './modals/notification/notification.component';
 import { EquipmentComponent } from './pages/equipment/equipment.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { EquipmentComponent } from './pages/equipment/equipment.component';
     NotificationComponent,
     EquipmentComponent,
   ],
-  imports: [BrowserModule, RoutingModule],
+  imports: [BrowserModule, RoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
